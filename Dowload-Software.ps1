@@ -8,6 +8,8 @@ New-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideD
 New-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel\' -Name '{20D04FE0-3AEA-1069-A2D8-08002B30309D}' -Value 0
 New-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu\' -Name '{20D04FE0-3AEA-1069-A2D8-08002B30309D}' -Value 0
 
+#Disable Hibernate
+powercfg /h off
 
 $url1 = "https://ninite.com/7zip-adoptjavax8-chrome-firefox-vlc/ninite.exe"
 $output1 = "~\Downloads\ninite.exe"
