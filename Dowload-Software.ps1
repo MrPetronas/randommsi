@@ -11,6 +11,10 @@ New-ItemProperty 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideD
 #Disable Hibernate
 powercfg /h off
 
+#set to never sleep
+Powercfg /x -standby-timeout-ac 0
+
+
 $url1 = "https://ninite.com/7zip-adoptjavax8-chrome-firefox-vlc/ninite.exe"
 $output1 = "~\Downloads\ninite.exe"
 
