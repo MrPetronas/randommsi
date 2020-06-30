@@ -29,7 +29,7 @@ sleep -s 1
 Start-Process -FilePath "$output1" -Verb RunAs
 
 Invoke-WebRequest -Uri $url2 -OutFile $output2
-sleep -s 1
+sleep -s 180
 Start-Process -FilePath "$output2" -Verb RunAs
 
 
