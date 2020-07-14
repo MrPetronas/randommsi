@@ -15,7 +15,7 @@ powercfg /h off
 Powercfg /x -standby-timeout-ac 0
 
 
-$url1 = "https://ninite.com/7zip-adoptjavax8-chrome-firefox-vlc/ninite.exe"
+$url1 = "https://ninite.com/7zip-chrome-firefox-notepadplusplus-vlc/"
 $output1 = "~\Downloads\ninite.exe"
 
 
