@@ -32,6 +32,33 @@ Invoke-WebRequest -Uri $url2 -OutFile $output2
 sleep -s 240
 Start-Process -FilePath "$output2" -Verb RunAs
 
+if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
+{
+    Write-Host "neirasom"
+}else{
+    Write-Host "irasom"
+
+    $o365xml = "https://github.com/MrPetronas/Install-Default-Apps/raw/master/0365MonthlyConfiguration.xml"
+    $o365xmllocal = "~\desktop\0365MonthlyConfiguration.xml"
+
+
+    Invoke-WebRequest -Uri $o365xml -OutFile $o365xmllocal
+    sleep -s 1    
+
+    $office365Setupexe = "https://github.com/MrPetronas/Install-Default-Apps/raw/master/setup.exe"
+    $office365Setupexelocal = "~\desktop\setup.exe"
+
+
+    Invoke-WebRequest -Uri $office365Setupexe -OutFile $office365Setupexelocal
+    sleep -s 2
+    Start-Process -FilePath "$office365Setupexelocal" -Verb RunAs -ArgumentList "/configure ~\desktop\0365MonthlyConfiguration.xml"
+    
+}
+
+
+
+
+
 
 $userName = "administrator"
 Enable-LocalUser -Name $userName
