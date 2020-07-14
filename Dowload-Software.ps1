@@ -35,6 +35,13 @@ Invoke-WebRequest -Uri $url2 -OutFile $output2
 sleep -s 240
 Start-Process -FilePath "$output2" -Verb RunAs
 
+$javadowload = "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=242029_3d5a2bb8f8d4428bbe94aed7ec7ae784"
+$javadowloadlocal = "~\Downloads\java.exe"
+
+Invoke-WebRequest -Uri $javadowload -OutFile $javadowloadlocal
+sleep -s 120
+Start-Process -FilePath "$javadowloadlocal" -Verb RunAs
+
 if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
 {
     Write-Host "neirasom"
