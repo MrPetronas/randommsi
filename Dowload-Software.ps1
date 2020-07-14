@@ -22,10 +22,13 @@ $output1 = "~\Downloads\ninite.exe"
 $url2 = "https://admdownload.adobe.com/bin/live/readerdc_en_a_install.exe"
 $output2 = "~\Downloads\readerdc_en_a_install.exe"
 
-
+while((Test-NetConnection).PingSucceeded -eq $false){
+    Write-Host "no network"
+    sleep -Seconds 5
+}
 
 Invoke-WebRequest -Uri $url1 -OutFile $output1
-sleep -s 1
+sleep -s 5
 Start-Process -FilePath "$output1" -Verb RunAs
 
 Invoke-WebRequest -Uri $url2 -OutFile $output2
@@ -51,7 +54,7 @@ if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
 
     Invoke-WebRequest -Uri $office365Setupexe -OutFile $office365Setupexelocal
     sleep -s 2
-    Start-Process -FilePath "$office365Setupexelocal" -Verb RunAs -ArgumentList "/configure ~\desktop\0365MonthlyConfiguration.xml"
+    Start-Process -FilePath "$office365Setupexelocal" -Verb RunAs -ArgumentList "/configure C:\Users\Administrator\desktop\0365MonthlyConfiguration.xml"
     
 }
 
