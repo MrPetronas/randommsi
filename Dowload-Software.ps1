@@ -15,17 +15,13 @@ powercfg /h off
 Powercfg /x -standby-timeout-ac 0
 
 
-$url1 = "https://ninite.com/7zip-chrome-firefox-notepadplusplus-vlc/"
+$url1 = "https://ninite.com/7zip-chrome-firefox-notepadplusplus-vlc/ninite.exe"
 $output1 = "~\Downloads\ninite.exe"
 
 
 $url2 = "https://admdownload.adobe.com/bin/live/readerdc_en_a_install.exe"
 $output2 = "~\Downloads\readerdc_en_a_install.exe"
 
-while((Test-NetConnection).PingSucceeded -eq $false){
-    Write-Host "no network"
-    sleep -Seconds 5
-}
 
 Invoke-WebRequest -Uri $url1 -OutFile $output1
 sleep -s 5
