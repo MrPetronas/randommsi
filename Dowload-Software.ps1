@@ -79,6 +79,8 @@ Set-LocalUser -Name $userName -AccountNeverExpires
 
 Get-ChildItem -Path C:\Users\Public\Desktop\ | Remove-Item
 
+Get-ChildItem -Path C:\Users\administrator\Desktop\  | Remove-Item
+
 Write-Host "Suvesk kompiuterio Varda"
 $PCname = Read-Host
 Rename-Computer -NewName "$PCname"
