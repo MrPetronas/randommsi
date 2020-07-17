@@ -77,6 +77,7 @@ Set-LocalUser -Name $userName -Password $Password
 Set-LocalUser -Name $userName -PasswordNeverExpires 1
 Set-LocalUser -Name $userName -AccountNeverExpires
 
+Get-ChildItem -Path C:\Users\Public\Desktop\ | Remove-Item
 
 Write-Host "Suvesk kompiuterio Varda"
 $PCname = Read-Host
