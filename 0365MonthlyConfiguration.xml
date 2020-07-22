@@ -10,9 +10,6 @@
       <Language ID="lt-lt" />
       <ExcludeApp ID="Groove" />
     </Product>
-    <Product ID="ProofingTools">
-      <Language ID="lt-lt" />
-    </Product>
   </Add>
   <Property Name="SharedComputerLicensing" Value="0" />
   <Property Name="PinIconsToTaskbar" Value="TRUE" />
