@@ -31,7 +31,7 @@ Invoke-WebRequest -Uri $url2 -OutFile $output2
 sleep -s 240
 Start-Process -FilePath "$output2" -Verb RunAs
 
-$javadowload = "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=243737_61ae65e088624f5aaa0b1d2d801acb16"
+$javadowload = "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=244036_89d678f2be164786b292527658ca1605"
 $javadowloadlocal = "~\Downloads\java.exe"
 
 Invoke-WebRequest -Uri $javadowload -OutFile $javadowloadlocal
