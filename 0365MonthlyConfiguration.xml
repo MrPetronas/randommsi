@@ -4,11 +4,14 @@
       <Language ID="en-us" />
       <Language ID="lt-lt" />
       <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
     </Product>
     <Product ID="LanguagePack">
       <Language ID="en-us" />
       <Language ID="lt-lt" />
       <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      
     </Product>
   </Add>
   <Property Name="SharedComputerLicensing" Value="0" />
