@@ -84,3 +84,6 @@ Get-ChildItem -Path C:\Users\administrator\Desktop\  | Remove-Item
 Write-Host "Suvesk kompiuterio Varda"
 $PCname = Read-Host
 Rename-Computer -NewName "$PCname"
+
+#enables computer restore point
+Enable-ComputerRestore -Drive "C:\"
