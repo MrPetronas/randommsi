@@ -59,6 +59,16 @@ if((read-host "ar reikia office 365? jei ne spauskite N ir Enter") -like "n")
     sleep -s 2
     Start-Process -FilePath "$office365Setupexelocal" -Verb RunAs -ArgumentList "/configure C:\Users\Administrator\desktop\0365MonthlyConfiguration.xml"
     
+    #appAssociasions
+    $appassociationsxml = "https://raw.githubusercontent.com/MrPetronas/Install-Default-Apps/master/AppAssociations.xml"
+    $appassociationsxmllocal = "c:\AppAssociations.xml"
+
+
+    Invoke-WebRequest -Uri $appassociationsxml -OutFile $appassociationsxmllocal
+    sleep -s 1    
+
+    Dism /Online /import-DefaultAppAssociations:"C:\AppAssociations.xml"
+    
 }
 
 
