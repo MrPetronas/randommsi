@@ -27,6 +27,8 @@ Invoke-WebRequest -Uri $url1 -OutFile $output1
 sleep -s 5
 Start-Process -FilePath "$output1" -Verb RunAs
 
+$temp = Get-CimInstance -ClassName Win32_ComputerSystem | select Model; $site = "https://www.google.com/search?q="+ $temp.Model + " Drivers"; start $site
+
 Invoke-WebRequest -Uri $url2 -OutFile $output2
 sleep -s 240
 Start-Process -FilePath "$output2" -Verb RunAs
